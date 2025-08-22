@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SmartImageMap Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        img { max-width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+    <h1>SmartImageMap Demo</h1>
+    <p>Resize the window, the clickable area stays correct!</p>
+
+    <img src="https://i.postimg.cc/W3dZMK1F/radar.png" usemap="#image-map" style="width: 300px;">
+    <map name="image-map">
+        <area target="_blank" alt="Google" title="Google" href="https://google.com.pk" 
+              coords="79,51,70,169,82,220,107,275,157,334,186,353,276,389,326,390,372,392,395,384,412,376,424,364,429,353,428,332,423,315,415,295,401,271,383,243,366,220,349,198,341,187,310,158,293,140,282,124,213,76,185,57,159,42,145,35,132,31,118,28,105,29,91,35,71,80,68,134" 
+              shape="poly">
+    </map>
+
+    <script src="smart-image-map.js"></script>
+    <script>
+        window.onload = function()
+        {
+            window.imageMapResize(); // call your library
+        };
+    </script>
+</body>
+</html>
